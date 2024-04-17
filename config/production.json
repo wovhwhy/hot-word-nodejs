@@ -1,0 +1,13 @@
+{
+    "serverConfig": {
+        "host": "0.0.0.0",
+        "port": 33001
+    },
+    "dbConfig": {
+        "host": "124.220.156.219",
+        "port": 3311,
+        "user": "monikai",
+        "password": "6qWwtMfjHzoAJUYh",
+        "database": "hot"
+    }
+}

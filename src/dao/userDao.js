@@ -15,18 +15,16 @@ exports.getWordDetal = async (wordName) => {
     return await db.query(sql, sqlParams);
 };
 
-exports.getUserInfo = async (userId) => {
+exports.getWord = async () => {
     const sql = `
         SELECT
-            user_id AS userId,
-            user_name AS userName,
-            gender,
-            age
+            word_id AS wordId,
+            word_name AS wordName,
+            word_meaning AS wordMeaning,
+            img,
+            date
         FROM
-            user_info
-        WHERE
-            user_id = ?
+            word
     `;
-    const sqlParams = [userId];
-    return await db.query(sql, sqlParams);
+    return await db.query(sql);
 };

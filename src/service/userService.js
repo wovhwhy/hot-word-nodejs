@@ -5,7 +5,7 @@ exports.getWordDetal = async (wordName) => {
     return wordMeaning;
 };
 
-exports.getUserInfo = async (userId) => {
-    const userInfo = await userDao.getUserInfo(userId);
-    return userInfo;
+exports.getWord = async () => {
+    const word = await userDao.getWord();
+    return word;
 };

@@ -10,9 +10,7 @@ Content-Type: application/json
 
 
 ### 获取用户详细信息
-POST http://127.0.0.1:56565/api/user/getUserInfo
+POST http://127.0.0.1:56565/api/user/getWord
 Content-Type: application/json
 
-{
-    "userId": "23209010001"
-}
+

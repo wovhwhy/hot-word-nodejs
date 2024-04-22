@@ -8,7 +8,7 @@ router.post('/getWordDetal', async (req, res, next) => {
     res.ResultVO(0, '成功', result);
 });
 
-router.post('/getUserInfo', async (req, res, next) => {
-    const result = await userService.getUserInfo(req.body.userId);
+router.post('/getWord', async (req, res, next) => {
+    const result = await userService.getWord();
     res.ResultVO(0, '成功', result);
 });

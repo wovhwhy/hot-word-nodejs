@@ -9,3 +9,12 @@ exports.getWord = async () => {
     const word = await userDao.getWord();
     return word;
 };
+exports.addUser = async (userId, password) => {
+    const user = await userDao.addUser(userId, password);
+    return user;
+};
+
+exports.getUserPassword = async (userId) => {
+    const password = await userDao.getUserPassword(userId);
+    return password;
+};

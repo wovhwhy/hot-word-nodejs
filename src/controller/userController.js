@@ -13,6 +13,10 @@ router.post('/getWord', async (req, res, next) => {
     const result = await userService.getWord();
     res.ResultVO(0, '成功', result);
 });
+router.post('/getWord2', async (req, res, next) => {
+    const result = await userService.getWord2();
+    res.ResultVO(0, '成功', result);
+});
 //得用户密码
 router.post('/getUserPassword', async (req, res, next) => {
     const result = await userService.getUserPassword(req.body.userId);

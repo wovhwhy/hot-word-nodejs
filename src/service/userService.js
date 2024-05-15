@@ -10,6 +10,10 @@ exports.getWord = async () => {
     const word = await userDao.getWord();
     return word;
 };
+exports.getWord2 = async () => {
+    const word2 = await userDao.getWord2();
+    return word2;
+};
 exports.addUser = async (userId, password) => {
     const passwordEnd = bcrypt.hashSync(password, 10);
     const user = await userDao.addUser(userId, passwordEnd);

@@ -29,7 +29,18 @@ exports.getWord = async () => {
     `;
     return await db.query(sql);
 };
-
+exports.getWord2 = async () => {
+    const sql = `
+        SELECT
+            word_id AS wordId,
+            word_name AS wordName,
+            word_meaning AS wordMeaning,
+            img
+        FROM
+            word2
+    `;
+    return await db.query(sql);
+};
 exports.addUser = async (userId, password) => {
     const sql = `
         INSERT INTO

@@ -2,6 +2,7 @@ const router = require('express').Router();
 module.exports = router;
 
 const userService = require('../service/userService');
+const authService = require('../service/authService');
 
 router.post('/getWordDetal', async (req, res, next) => {
     const result = await userService.getWordDetal(req.body.wordName);
@@ -20,5 +21,10 @@ router.post('/getUserPassword', async (req, res, next) => {
 //用户注册
 router.post('/addUser', async (req, res, next) => {
     const result = await userService.addUser(req.body.userId, req.body.password);
+    res.ResultVO(0, '成功', result);
+});
+//获取tocken
+router.post('/login', async (req, res, next) => {
+    const result = await authService.login(req.body.userId, req.body.password);
     res.ResultVO(0, '成功', result);
 });

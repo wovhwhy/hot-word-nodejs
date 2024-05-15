@@ -1,4 +1,5 @@
 const userDao = require('../dao/userDao');
+const bcrypt = require('bcrypt');
 
 exports.getWordDetal = async (wordName) => {
     const wordMeaning = await userDao.getWordDetal(wordName);
@@ -10,7 +11,8 @@ exports.getWord = async () => {
     return word;
 };
 exports.addUser = async (userId, password) => {
-    const user = await userDao.addUser(userId, password);
+    const passwordEnd = bcrypt.hashSync(password, 10);
+    const user = await userDao.addUser(userId, passwordEnd);
     return user;
 };
 
